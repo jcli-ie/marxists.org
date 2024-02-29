@@ -6,7 +6,9 @@
   },
   "scripts": {
     "tw": "npx tailwindcss -o ./www/styles/style.css --watch",
-    "go": "templ generate && go run *.go",
+    "go": "templ generate && go run .",
+    "watch": "air",
+    "sync": "browser-sync start --proxy \"localhost:8080\" --files=\"./tmp/main\" --reload-delay 1000",
     "start": "npm run tw & npm run go",
     "test-int": "docker-compose -f ./docker/tests/docker-compose.yml up --build"
   }
