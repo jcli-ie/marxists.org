@@ -5,11 +5,12 @@
     "tailwind": "^4.0.0"
   },
   "scripts": {
-    "tw": "npx tailwindcss -o ./www/styles/style.css --watch",
+    "css-watch": "npx tailwindcss -i ./tailwind.css -o ./www/styles/style.css --watch",
+    "css": "npx tailwindcss -i ./tailwind.css -o ./www/styles/style.css",
     "go": "templ generate && go run .",
     "watch": "air",
     "sync": "browser-sync start --proxy \"localhost:8080\" --files=\"./tmp/main\" --reload-delay 1000",
-    "start": "npm run tw & npm run go",
+    "start": "npm run css & npm run go",
     "test-int": "docker-compose -f ./docker/tests/docker-compose.yml up --build"
   }
 }
