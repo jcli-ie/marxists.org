@@ -1,6 +1,29 @@
 package views
 
 templ Index() {
-	@Navbar(false)
-	@Hero()
+	@Navbar(true)
+	<main class="mx-auto flex flex-col w-2/3 mt-5 ">
+		@Hero()
+		<div class="flex flex-row gap-5">
+			<section class="border-t-red border-t-4 w-1/2 mt-5 bg-surface rounded-xl">
+				<ul class="divide-y divide-grey-600">
+					<h1 class="px-5">Marxists</h1>
+					<li class="px-5">Karl Marx</li>
+					<li class="px-5">Friedrich Engels</li>
+					<li class="px-5">Vladimir Ilych Lenin</li>
+					<li class="px-5">Leon Trotsky</li>
+					<li class="px-5">Joseph Stalin</li>
+				</ul>
+			</section>
+			<section class="border-t-blue border-t-4 w-1/2 mt-5 p-5 bg-surface rounded-xl">
+				<ul>
+					<h1>Library</h1>
+					<div class="divider"></div>
+					<li>First International</li>
+					<li>Social Democracy</li>
+					<li>Fabians</li>
+				</ul>
+			</section>
+		</div>
+	</main>
 }

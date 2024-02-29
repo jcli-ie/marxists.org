@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  :root {
+    @apply bg-base;
+  }
+
+  h1 {
+    @apply mb-1 mt-2 text-3xl font-bold md:mb-2 md:mt-4;
+  }
+
+  .theme-controller:not(:checked) ~ .moon-icon {
+    @apply stroke-subtle;
+  }
+
+  .theme-controller:checked ~ .sun-icon {
+    @apply stroke-black;
+  }
+}
